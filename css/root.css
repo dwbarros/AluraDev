@@ -1,0 +1,61 @@
+:root {
+    /******* Typography *******/
+    --font-primary: 'Inter', sans-serif;
+    --font-codeEditor: font-family: 'Roboto', sans-serif;
+    
+    --font-size-title: 1.31rem;
+    --font-size-body: 1rem;
+    --font-size-section: .75rem;
+    --font-size-editor: .875rem;
+
+    /******* Color palette */
+    --color-light: #F2F2F2;
+    --color-primary-100: #96B9FD;
+    --color-primary-200: #7BA4FC;
+    --color-primary-300: #5081FB;
+    --color-primary-dark: #051d3b;
+    --color-dark: #000;
+
+    /******* Grey palette *******/
+    --color-grey-6: #666666;
+
+    /******* Base colors *******/
+    --color-font:var(--color-grey-6);
+    --color-background: var(--color-primary-dark);
+    --color-surface: var(--color-primary-dark);
+    --color-modal-bg: rgba(5, 29, 59, 0.8);
+
+
+    /******* Component colors *******/
+    --color-btn-normal: var(--color-primary-300);
+    --color-btn-hover: var(--color-primary-200);
+    --color-btn-pressed: var(--color-primary-200);
+    --color-btn-focus: var(--color-primary-100);
+    --color-btnDark-normal: rgba(80, 129, 251, .08);
+    --color-btnDark-hover: rgba(80, 129, 251, .16);
+    --color-btnDark-pressed: rgba(80, 129, 251, .16);
+    --color-btnDark-focus: rgba(80, 129, 251, .24);
+
+    --color-formComponent-normal: rgba(255, 255, 255, .16);
+    --color-formComponent-hover: rgba(255, 255, 255, .24);
+    --color-formComponent-font: rgba(255, 255, 255, .64);
+
+    --color-menu-bg: #2D415B;
+    --color-menuIcon-hover: rgba(80, 129, 251, .08);
+    --color-menuIcon-pressed: rgba(255, 255, 255, .16);
+    --color-userIcon-hover: rgba(255, 255, 255, .08);
+
+    --color-menuItem-normal: rgba(80, 129, 251, .16);
+    --color-menuItem-hover: rgba(80, 129, 251, .64);
+    --color-menuItem-focus: var(--color-primary-300);
+    --color-menuItemText-normal: rgba(255, 255, 255, .56);
+    --color-menuItemText-hover: rgba(255, 255, 255, .72);
+    --color-menuItemText-focus: white;
+
+    --color-editor-bg: var(--color-dark);
+    --color-editor-border: #6BD1FF;
+    --color-editor-shadow: rgba(0, 0, 0, 0.24);
+    --color-editor-ellipse-exit: #FF5F56;
+    --color-editor-ellipse-max: #FFBD2E;
+    --color-editor-ellipse-min: #27C93F;
+}
