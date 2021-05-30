@@ -5,9 +5,9 @@
 }
 
 .project__cards {
-    display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1.5rem
 }
 
 .project__card {
@@ -84,7 +84,7 @@
 .project__description {
     color: var(--color-light);
     opacity: 0.8;
-    margin: 8px 0px;
+    margin-bottom: 2rem;
 }
 
 .project__social-icons {
@@ -98,8 +98,8 @@
     display: flex;
 
     border-radius: 16px;
-    margin: 0 .5rem;
-    padding: .75rem;
+    margin: 0 .2rem;
+    padding: .6rem;
 }
 
 .project__social-icon p {
@@ -116,4 +116,15 @@
 
 .project__user {
     margin-left: auto;
+}
+
+.project__user img {
+    width: 24px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .project__cards {
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+     }
 }
