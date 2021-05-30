@@ -2,12 +2,13 @@
     display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 
-            "project-container";
+            "project";
         justify-content: center;
         
     padding: .5rem 1rem;
 
 }
+
 
 @media screen and (min-width: 768px) {
     .grid-container__community {
@@ -22,7 +23,7 @@
         display: grid;
             grid-template-columns: 240px auto;
             grid-template-areas: 
-                "sidenav project-container";
+                "sidenav project";
             grid-gap: 1rem;
             justify-content: stretch;
         

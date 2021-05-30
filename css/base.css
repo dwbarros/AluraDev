@@ -98,6 +98,7 @@ body {
 }
 
 .user-link {
+    display: flex;
     align-items: center;
     border-radius: 8px;
     padding: .5rem;
@@ -108,7 +109,7 @@ body {
 }
 
 .user-link img {
-    border-radius: 100%;  
+    border-radius: 100%;
     width: 32px;
 }
 
