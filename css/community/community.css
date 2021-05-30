@@ -11,7 +11,7 @@
 
 @media screen and (min-width: 768px) {
     .grid-container__community {
-        padding: 1rem 4rem;
+        padding: 1rem 2rem;
         
         transition: 1s;
     }
@@ -20,7 +20,7 @@
 @media screen and (min-width: 1024px) {
     .grid-container__community {
         display: grid;
-            grid-template-columns: 240px auto;
+            grid-template-columns: 280px auto;
             grid-template-areas: 
                 "sidenav project";
             grid-gap: 1rem;

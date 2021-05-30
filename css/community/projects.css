@@ -114,6 +114,10 @@
     background-color: var(--color-menuIcon-pressed);
 }
 
+.social-icon--active svg path{
+    fill: var(--color-projectIcon-active);
+}
+
 .project__user {
     margin-left: auto;
 }
