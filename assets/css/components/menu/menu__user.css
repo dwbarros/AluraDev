@@ -1,0 +1,12 @@
+.menu__user {
+    display: flex;
+
+    margin-top: 2rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .menu__user {
+        display: none;
+    }    
+}

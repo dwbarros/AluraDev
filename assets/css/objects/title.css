@@ -1,0 +1,13 @@
+.title {
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: white;
+}
+
+.title-section {
+    color: white;
+    font-size: var(--font-size-section);
+    letter-spacing: .4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}

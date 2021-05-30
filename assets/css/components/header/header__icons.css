@@ -1,26 +1,3 @@
-.header {
-    background-color: var(--color-background);
-
-    display: flex;
-        align-items: center;
-        justify-content: space-between;
-}
-
-.header__logo {
-    padding: .5rem;
-}
-
-.header__search-bar {
-    display: none;
-    
-    margin: 0 2rem;
-    max-width: 50%;
-}
-
-.header__search-bar:hover {
-    background-color: var(--color-formComponent-hover);
-}
-
 .header__icons {
     display: flex;
         align-items: center;
@@ -81,26 +58,16 @@
     background-color: var(--color-menuIcon-pressed);
 }
 
-.menu-open .header__close-icon {
-    display: initial;
-}
-
 
 /******* Media Queries *******/
 
 @media screen and (min-width: 576px) {
-    .header__search-bar {
-        display: initial;
-        flex: 1;
-    }
-
     .header__search-icon {
         display: none;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    
     .header__menu-icon {
         display: none;
     }

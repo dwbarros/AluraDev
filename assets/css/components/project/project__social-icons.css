@@ -1,0 +1,38 @@
+.project__social-icons {
+    display: flex;
+        align-items: center;
+
+    color: var(--color-light);
+}
+
+.project__social-icon {
+    display: flex;
+
+    border-radius: 16px;
+    margin: 0 .2rem;
+    padding: .6rem;
+}
+
+.project__social-icon p {
+    margin-left: .5rem;
+}
+
+.project__social-icon:hover {
+    background-color: var(--color-menuIcon-hover);
+}
+
+.project__social-icon:active {
+    background-color: var(--color-menuIcon-pressed);
+}
+
+.social-icon--active svg path{
+    fill: var(--color-projectIcon-active);
+}
+
+.project__user {
+    margin-left: auto;
+}
+
+.project__user img {
+    width: 24px;
+}

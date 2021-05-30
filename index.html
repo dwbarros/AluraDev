@@ -11,15 +11,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./assets/css/generic/reset.css">
+    <link rel="stylesheet" href="./assets/css/generic/root.css">
 
-    <link rel="stylesheet" href="./css/code-editor/header.css">
-    <link rel="stylesheet" href="./css/code-editor/sidenav.css">
-    <link rel="stylesheet" href="./css/code-editor/code-editor.css">
-    <link rel="stylesheet" href="./css/code-editor/custom.css">
-    <link rel="stylesheet" href="./css/code-editor/custom-select.css">
+    <link rel="stylesheet" href="./assets/css/elements/base.css">
+    
+    <link rel="stylesheet" href="./assets/css/objects/title.css">
+    <link rel="stylesheet" href="./assets/css/objects/button.css">
+    <link rel="stylesheet" href="./assets/css/objects/button-dark.css">
+    <link rel="stylesheet" href="./assets/css/objects/form-component.css">
+    <link rel="stylesheet" href="./assets/css/objects/user-link.css">
+    <link rel="stylesheet" href="./assets/css/objects/editor.css">
+    <link rel="stylesheet" href="./assets/css/objects/select.css">
+    
+    <link rel="stylesheet" href="./assets/css/components/layout/container.css">
+
+    <link rel="stylesheet" href="./assets/css/components/header/header.css">
+    <link rel="stylesheet" href="./assets/css/components/header/header__icons.css">
+    <link rel="stylesheet" href="./assets/css/components/header/header__logo.css">
+    <link rel="stylesheet" href="./assets/css/components/header/header__search-bar.css">
+
+    <link rel="stylesheet" href="./assets/css/components/code-editor/code-editor.css">
+
+    <link rel="stylesheet" href="./assets/css/components/custom/custom.css">
+    <link rel="stylesheet" href="./assets/css/components/custom/custom__config.css">
+    <link rel="stylesheet" href="./assets/css/components/custom/custom__project.css">
+
+    <link rel="stylesheet" href="./assets/css/components/sidenav/sidenav.css">
+
+    <link rel="stylesheet" href="./assets/css/components/menu/menu.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__close-icon.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__list.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__search.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__user.css">  
 </head>
 <body>
     <header class="header container">
@@ -38,7 +62,7 @@
         
         <div class="header__icons">
             <a class="header__user user-link" href="#">
-                <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
+                <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
                 <h3>David William</h3>
             </a>
 
@@ -89,7 +113,7 @@
                     </ul>
 
                     <a class="menu__user user-link" href="#">
-                        <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
+                        <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
                         <h3>David William</h3>
                     </a>
                 </nav>
@@ -131,7 +155,7 @@
             <section class="custom__config">
                 <h2 class="custom__config__title title-section" >Personalização</h2>
 
-                <div class="custom__config__lp custom-select">
+                <div class="custom__config__lp select">
                     <select name="select-lp" id="select-lp">
                         <option value="javascript">JavaScript</option>
 

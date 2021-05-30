@@ -1,9 +1,3 @@
-.code-editor {
-    grid-area: code-editor;
-    padding: .5rem;
-
-}
-
 .editor {
     display: flex;
         flex-direction: column;
@@ -19,14 +13,14 @@
 }
 
 .editor__ellipses {
+    display: flex;
+        justify-content: space-between;
+
     width: 50px;
 
     position: absolute;
         left: 46px;
         top: 46px;
-
-    display: flex;
-        justify-content: space-between;
 }
 
 .editor__ellipse1 {

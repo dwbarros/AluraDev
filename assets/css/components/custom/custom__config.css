@@ -1,37 +1,10 @@
-.custom {
-    grid-area: custom;
-    padding: 1rem;
-}
-
-/******* Project Section *******/
-.custom__project {
-    margin-bottom: 1.5rem;
-    
-    display: flex;
-    flex-direction: column;
-}
-
-.custom__project__name {
-    margin-bottom: 1rem;
-    font-size: var(--font-size-editor);
-
-}
-
-.custom__project__description {
-    height: 5rem;
-    resize: none;
-    font-size: var(--font-size-editor);
-}
-
-
-/******* Config Section *******/
 .custom__config {
-    margin-bottom: 1rem;
-    
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    margin-bottom: 1rem;
 }
 
 .custom__config__title {
@@ -39,13 +12,11 @@
 }
 
 .custom__config__lp {
-    margin-bottom: 1rem;
     font-size: var(--font-size-editor);
+    margin-bottom: 1rem;
     width: 48%;
 }
 
-
-  /******* Custom Button *******/
 .custom__config__button {
     background: rgba(196, 196, 196, 0.01);
     border: 1px solid white;
@@ -75,6 +46,4 @@
     .custom__config__button {
         width: 100%;
     }
-
-
 }

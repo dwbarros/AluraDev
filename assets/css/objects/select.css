@@ -1,10 +1,10 @@
  /* W3C code for custom select */
  
- .custom-select {
+ .select {
     position: relative;
   }
   
-  .custom-select select {
+  .select select {
     display: none; /*hide original SELECT element: */
   }
   

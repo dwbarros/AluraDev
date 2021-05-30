@@ -1,0 +1,25 @@
+.menu {
+    background-color: var(--color-menu-bg);
+    border-radius: 8px;
+    box-shadow: 0px 16px 24px var(--color-editor-shadow);
+    height: 50vh;
+    margin-left: auto;
+    margin-right: .5rem;
+    padding: 2rem;
+    width: 240px;
+}
+
+
+@media screen and (min-width: 576px) {
+    .menu {
+        height: calc(100vh - 160px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menu {
+        background-color: var(--color-surface);
+        box-shadow: none;
+        padding: 1rem;
+    } 
+}

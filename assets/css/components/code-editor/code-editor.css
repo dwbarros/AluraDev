@@ -1,0 +1,4 @@
+.code-editor {
+    grid-area: code-editor;
+    padding: .5rem;
+}

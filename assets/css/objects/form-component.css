@@ -1,0 +1,8 @@
+.form-component {
+    background-color: var(--color-formComponent-normal);
+    border: none;
+    border-radius: .5rem;
+    color: var(--color-formComponent-font);
+    font-size: var(--font-size-body);
+    padding: .9rem 1rem;
+}

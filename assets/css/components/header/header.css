@@ -1,0 +1,12 @@
+.header {
+    background-color: var(--color-background);
+
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.menu-open .header__close-icon {
+    display: initial;
+}
+

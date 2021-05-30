@@ -1,0 +1,77 @@
+.container {
+    padding: 1rem 2rem;
+}
+
+.grid-container {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "code-editor"
+            "custom";
+        justify-content: center;
+        
+    padding: .5rem 1rem;
+
+}
+
+.grid-container__community {
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "project";
+        justify-content: center;
+        
+    padding: .5rem 1rem;
+}
+
+
+/******* Media Queries *******/
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        padding: 1rem 3rem;
+        
+        transition: 1s;
+    }
+
+    .grid-container__community {
+        padding: 1rem 2rem;
+        
+        transition: 1s;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-container {
+        display: grid;
+            grid-template-areas: 
+                "sidenav code-editor custom";
+            grid-template-columns: 240px auto 22%;
+            grid-gap: 1rem;
+            justify-content: stretch;
+        
+        padding: 1rem 2rem;
+    }
+
+    .grid-container__community {
+        display: grid;
+            grid-template-areas: 
+                "sidenav project";
+            grid-template-columns: 250px auto;
+            grid-gap: 1rem;
+            justify-content: stretch;
+        
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (min-width: 2800px) {
+    .container {
+        padding: 2rem;
+    }
+    .grid-container {
+        grid-template-columns: 10% auto 20%;
+
+        padding: 2rem;
+    }
+}

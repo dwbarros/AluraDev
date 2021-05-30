@@ -11,15 +11,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/root.css">
-    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./assets/css/generic/reset.css">
+    <link rel="stylesheet" href="./assets/css/generic/root.css">
 
-    <link rel="stylesheet" href="./css/code-editor/header.css">
-    <link rel="stylesheet" href="./css/code-editor/sidenav.css">
-    <link rel="stylesheet" href="./css/community/community.css">
-    <link rel="stylesheet" href="./css/community/projects.css">
+    <link rel="stylesheet" href="./assets/css/elements/base.css">
 
+    <link rel="stylesheet" href="./assets/css/objects/title.css">
+    <link rel="stylesheet" href="./assets/css/objects/button.css">
+    <link rel="stylesheet" href="./assets/css/objects/button-dark.css">
+    <link rel="stylesheet" href="./assets/css/objects/form-component.css">
+    <link rel="stylesheet" href="./assets/css/objects/user-link.css">
+    <link rel="stylesheet" href="./assets/css/objects/editor.css">
+
+    <link rel="stylesheet" href="./assets/css/components/layout/container.css">
+
+    <link rel="stylesheet" href="./assets/css/components/header/header.css">
+    <link rel="stylesheet" href="./assets/css/components/header/header__icons.css">
+    <link rel="stylesheet" href="./assets/css/components/header/header__logo.css">
+    <link rel="stylesheet" href="./assets/css/components/header/header__search-bar.css">
+
+    <link rel="stylesheet" href="./assets/css/components/code-editor/code-editor.css">
+
+    <link rel="stylesheet" href="./assets/css/components/project/project.css">
+    <link rel="stylesheet" href="./assets/css/components/project/project__card.css">
+    <link rel="stylesheet" href="./assets/css/components/project/project__social-icons.css">
+
+    <link rel="stylesheet" href="./assets/css/components/sidenav/sidenav.css">
+
+    <link rel="stylesheet" href="./assets/css/components/menu/menu.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__close-icon.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__list.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__search.css">
+    <link rel="stylesheet" href="./assets/css/components/menu/menu__user.css">  
 </head>
 <body>
     <header class="header container">
@@ -38,7 +61,7 @@
         
         <div class="header__icons">
             <a class="header__user user-link" href="#">
-                <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
+                <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
                 <h3>David William</h3>
             </a>
 
@@ -89,7 +112,7 @@
                     </ul>
 
                     <a class="menu__user user-link" href="#">
-                        <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
+                        <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
                         <h3>David William</h3>
                     </a>
                 </nav>
@@ -110,7 +133,7 @@
 
 
                 <li class="project__card">
-                    <div class="editor__container">
+                    <div class="project__editor project__editor editor__container">
                         <span class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
 
@@ -164,14 +187,136 @@
                             </a>
 
                             <a class="project__user user-link" href="#">
-                                <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
+                                <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
+                                
+                                <h3>David William</h3>
+                            </a>
+                        </div>
+                    </article>   
+                </li>                
+                
+                <li class="project__card">
+                    <div class="project__editor editor__container">
+                        <span class="editor__ellipses">
+                            <div class="editor__ellipse1"></div>
+
+                            <div class="editor__ellipse2"></div>
+
+                            <div class="editor__ellipse3"></div>
+                        </span>
+
+                        <textarea class="editor__textArea" name="editor" id="editor" cols="30" rows="15">
+                            <pre class="editor__textArea">
+                                <code contenteditable="true">
+                                    function closeAllSelect(elmnt) {
+                                        var x, y, i, xl, yl, arrNo = [];
+                                        y = document.getElementsByClassName("select-selected");
+                                        yl = y.length;
+    
+                                        for (i = 0; i < yl; i++) {
+                                            if (elmnt == y[i]) {
+                                                arrNo.push(i)
+                                            } else {
+                                                y[i].classList.remove("select-arrow-active");
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </textarea>
+                    </div>
+                    
+                    <article class="project__info">
+                        <h3 class="project__title">Título do Projeto</h3>
+
+                        <p class="project__description">Essa é a descrição do meu projeto</p>
+
+                        <div class="project__social-icons">
+                            <a class="project__social-icon" href="#">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z" fill="white"/>
+                                </svg>
+
+                                <p>6</p>
+                            </a>
+
+                            <a class="project__social-icon" href="#">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z" fill="white"/>
+                                </svg>
+
+                                <p>9</p>
+                            </a>
+
+                            <a class="project__user user-link" href="#">
+                                <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
                                 
                                 <h3>David William</h3>
                             </a>
                         </div>
                     </article>   
                 </li>                <li class="project__card">
-                    <div class="editor__container">
+                    <div class="project__editor editor__container">
+                        <span class="editor__ellipses">
+                            <div class="editor__ellipse1"></div>
+
+                            <div class="editor__ellipse2"></div>
+
+                            <div class="editor__ellipse3"></div>
+                        </span>
+
+                        <textarea class="editor__textArea" name="editor" id="editor" cols="30" rows="15">
+                            <pre class="editor__textArea">
+                                <code contenteditable="true">
+                                    function closeAllSelect(elmnt) {
+                                        var x, y, i, xl, yl, arrNo = [];
+                                        y = document.getElementsByClassName("select-selected");
+                                        yl = y.length;
+    
+                                        for (i = 0; i < yl; i++) {
+                                            if (elmnt == y[i]) {
+                                                arrNo.push(i)
+                                            } else {
+                                                y[i].classList.remove("select-arrow-active");
+                                            }
+                                        }
+                                    }
+                                </code>
+                            </pre>
+                        </textarea>
+                    </div>
+                    
+                    <article class="project__info">
+                        <h3 class="project__title">Título do Projeto</h3>
+
+                        <p class="project__description">Essa é a descrição do meu projeto</p>
+
+                        <div class="project__social-icons">
+                            <a class="project__social-icon" href="#">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z" fill="white"/>
+                                </svg>
+
+                                <p>6</p>
+                            </a>
+
+                            <a class="project__social-icon" href="#">
+                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z" fill="white"/>
+                                </svg>
+
+                                <p>9</p>
+                            </a>
+
+                            <a class="project__user user-link" href="#">
+                                <img src="./assets/img/user_img.jpeg" alt="Autor do Projeto">
+                                
+                                <h3>David William</h3>
+                            </a>
+                        </div>
+                    </article>   
+                </li>                <li class="project__card">
+                    <div class="project__editor editor__container">
                         <span class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
 
@@ -231,7 +376,7 @@
                         </div>
                     </article>   
                 </li>                <li class="project__card">
-                    <div class="editor__container">
+                    <div class="project__editor editor__container">
                         <span class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
 
@@ -291,127 +436,7 @@
                         </div>
                     </article>   
                 </li>                <li class="project__card">
-                    <div class="editor__container">
-                        <span class="editor__ellipses">
-                            <div class="editor__ellipse1"></div>
-
-                            <div class="editor__ellipse2"></div>
-
-                            <div class="editor__ellipse3"></div>
-                        </span>
-
-                        <textarea class="editor__textArea" name="editor" id="editor" cols="30" rows="15">
-                            <pre class="editor__textArea">
-                                <code contenteditable="true">
-                                    function closeAllSelect(elmnt) {
-                                        var x, y, i, xl, yl, arrNo = [];
-                                        y = document.getElementsByClassName("select-selected");
-                                        yl = y.length;
-    
-                                        for (i = 0; i < yl; i++) {
-                                            if (elmnt == y[i]) {
-                                                arrNo.push(i)
-                                            } else {
-                                                y[i].classList.remove("select-arrow-active");
-                                            }
-                                        }
-                                    }
-                                </code>
-                            </pre>
-                        </textarea>
-                    </div>
-                    
-                    <article class="project__info">
-                        <h3 class="project__title">Título do Projeto</h3>
-
-                        <p class="project__description">Essa é a descrição do meu projeto</p>
-
-                        <div class="project__social-icons">
-                            <a class="project__social-icon" href="#">
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z" fill="white"/>
-                                </svg>
-
-                                <p>6</p>
-                            </a>
-
-                            <a class="project__social-icon" href="#">
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z" fill="white"/>
-                                </svg>
-
-                                <p>9</p>
-                            </a>
-
-                            <a class="project__user user-link" href="#">
-                                <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
-                                
-                                <h3>David William</h3>
-                            </a>
-                        </div>
-                    </article>   
-                </li>                <li class="project__card">
-                    <div class="editor__container">
-                        <span class="editor__ellipses">
-                            <div class="editor__ellipse1"></div>
-
-                            <div class="editor__ellipse2"></div>
-
-                            <div class="editor__ellipse3"></div>
-                        </span>
-
-                        <textarea class="editor__textArea" name="editor" id="editor" cols="30" rows="15">
-                            <pre class="editor__textArea">
-                                <code contenteditable="true">
-                                    function closeAllSelect(elmnt) {
-                                        var x, y, i, xl, yl, arrNo = [];
-                                        y = document.getElementsByClassName("select-selected");
-                                        yl = y.length;
-    
-                                        for (i = 0; i < yl; i++) {
-                                            if (elmnt == y[i]) {
-                                                arrNo.push(i)
-                                            } else {
-                                                y[i].classList.remove("select-arrow-active");
-                                            }
-                                        }
-                                    }
-                                </code>
-                            </pre>
-                        </textarea>
-                    </div>
-                    
-                    <article class="project__info">
-                        <h3 class="project__title">Título do Projeto</h3>
-
-                        <p class="project__description">Essa é a descrição do meu projeto</p>
-
-                        <div class="project__social-icons">
-                            <a class="project__social-icon" href="#">
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10 0.25C4.47656 0.25 0 3.88672 0 8.375C0 10.3125 0.835938 12.0859 2.22656 13.4805C1.73828 15.4492 0.105469 17.2031 0.0859375 17.2227C0 17.3125 -0.0234375 17.4453 0.0273438 17.5625C0.078125 17.6797 0.1875 17.75 0.3125 17.75C2.90234 17.75 4.84375 16.5078 5.80469 15.7422C7.08203 16.2227 8.5 16.5 10 16.5C15.5234 16.5 20 12.8633 20 8.375C20 3.88672 15.5234 0.25 10 0.25Z" fill="white"/>
-                                </svg>
-
-                                <p>6</p>
-                            </a>
-
-                            <a class="project__social-icon" href="#">
-                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18.0587 1.44659C15.9181 -0.377597 12.7346 -0.0494787 10.7698 1.97783L10.0003 2.77078L9.23077 1.97783C7.26987 -0.0494787 4.08243 -0.377597 1.94185 1.44659C-0.51123 3.5403 -0.640134 7.29804 1.55514 9.56752L9.11359 17.3721C9.60186 17.876 10.3948 17.876 10.8831 17.3721L18.4415 9.56752C20.6407 7.29804 20.5118 3.5403 18.0587 1.44659Z" fill="white"/>
-                                </svg>
-
-                                <p>9</p>
-                            </a>
-
-                            <a class="project__user user-link" href="#">
-                                <img src="./assets/user_img.jpeg" alt="Autor do Projeto">
-                                
-                                <h3>David William</h3>
-                            </a>
-                        </div>
-                    </article>   
-                </li>                <li class="project__card">
-                    <div class="editor__container">
+                    <div class="project__editor editor__container">
                         <span class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
 
@@ -473,7 +498,7 @@
                 </li>
 
                 <li class="project__card">
-                    <div class="editor__container">
+                    <div class="project__editor editor__container">
                         <span class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
 

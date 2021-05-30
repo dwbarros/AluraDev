@@ -1,0 +1,17 @@
+.project {
+    grid-area: project;
+    padding: .5rem;
+}
+
+.project__cards {
+    display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1.5rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .project__cards {
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));        
+     }
+}

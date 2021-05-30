@@ -1,0 +1,19 @@
+.menu__search {
+    display: flex;
+        align-items: center;
+
+    margin: 3rem 0 0 3rem;
+}
+
+.menu__search-bar{
+    background-color: var(--color-menu-bg);
+    box-shadow: 10px 16px 24px var(--color-editor-shadow);
+    padding: 1.3rem 1rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    .menu__search {
+        display: none;
+    }
+}

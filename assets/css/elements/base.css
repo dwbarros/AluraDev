@@ -1,0 +1,11 @@
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-primary);
+}
+
+
+@media screen and (min-width: 2800px) {
+    html {
+        font-size: 2rem;
+    }
+}
