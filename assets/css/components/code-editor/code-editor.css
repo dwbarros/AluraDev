@@ -2,3 +2,7 @@
     grid-area: code-editor;
     padding: .5rem;
 }
+
+.code-editor .editor__container{
+    margin-bottom: 2rem;
+}
