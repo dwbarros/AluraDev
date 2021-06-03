@@ -5,7 +5,7 @@
 }
 
 .editor__container {
-    background-color: var(--color-editor-border);
+    background-color: var(--color-editor-border1);
     border-radius: 8px;
     padding: 1.5rem;
     position: relative;

@@ -28,7 +28,8 @@
 }
 
 .custom__config__color {
-    background: #6BD1FF;
+    background: none;
+    border: none;
     border-radius: 4px;
     height: 40px;
     width: 100%;
