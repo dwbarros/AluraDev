@@ -10,6 +10,10 @@
     padding: 1.5rem;
 }
 
+.project__info:hover > .project__social-icons {
+    display: flex;
+}
+
 .project__title {
     color: var(--color-light);
     font-weight: bold;
