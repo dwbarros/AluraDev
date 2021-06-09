@@ -152,47 +152,57 @@
 
                 <button class="editor__button button-dark">Visualizar com o heighlight</button>
             </section>
+            <ul class="project__cards"></ul>
         </main>
 
         <aside class="custom">
-            <section class="custom__project">
-                <h2 class="custom__project__title title-section" >Seu Projeto</h2>
+            <form class="custom__form" action="" method="GET">
+                <fieldset class="custom__project">
+                    <legend class="custom__project__title title-section" >Seu Projeto</legend>
 
-                <input class="custom__project__name form-component" type="text" placeholder="Nome do projeto">
+                    <input class="custom__project__name form-component" type="text" placeholder="Nome do projeto" required>
 
-                <textarea class="custom__project__description form-component" name="description" id="description" cols="30" rows="10" placeholder="Descrição do seu projeto"></textarea>
-            </section>
+                    <textarea class="custom__project__description form-component" name="description" id="description" cols="30" rows="10" placeholder="Descrição do seu projeto"></textarea>
+                </fieldset>
 
-            <section class="custom__config">
-                <h2 class="custom__config__title title-section" >Personalização</h2>
+                <fieldset class="custom__config">
+                    <legend class="custom__config__title title-section" >Personalização</legend>
 
-                <select class="custom__config__lp form-component" name="select-lp" id="select-lp">
-                    <option value="javascript">JavaScript</option>
+                    <select class="custom__config__lp form-component" name="select-lp" id="select-lp">
+                        <option value="javascript">JavaScript</option>
 
-                    <option value="html">HTML</option>
+                        <option value="html">HTML</option>
 
-                    <option value="css">CSS</option>
-                </select>
-                                
-                <div class="custom__config__button">
-                    <input class="custom__config__color" type="color" value="#6BD1FF" list="presetColors">
-                        <datalist id="presetColors">
-                            <option>#6BD1FF</option>/>
-                            <option>#9AFF6B</option>
-                            <option>#FFC46B</option>
-                            <option>#FF6BCD</option>
-                            <option>#6B83FF</option>
-                        </datalist>
-                </div>
-            </section>
-
-            <button class="code-editor__button button">Salvar Projeto</button>
+                        <option value="css">CSS</option>
+                    </select>
+                                    
+                    <div class="custom__config__button">
+                        <input class="custom__config__color" type="color" value="#6BD1FF" list="presetColors">
+                            <datalist id="presetColors">
+                                <option>#6BD1FF</option>
+                                <option>#9AFF6B</option>
+                                <option>#FFC46B</option>
+                                <option>#FF6BCD</option>
+                                <option>#6B83FF</option>
+                            </datalist>
+                    </div>
+                </fieldset>
+                
+                <button class="code-editor__button button" type="submit">Salvar Projeto</button>
+            </form>
         </aside>        
     </div>
-    <script src="./js/menu.js"></script>
-    <script src="./js/inputColor.js"></script>
+    
+    <script src="./app/menu.js"></script>
+    <script src="./app/inputColor.js"></script>
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script>
-    <script src="./js/codeHighlight.js"></script>
+    <script src="./app/codeHighlight.js"></script>
 
+    <script src="./app/domain/Project.js"></script>
+    <script src="./app/domain/ProjectList.js"></script>
+    <script src="./app/controllers/ProjectController.js"></script>
+    <script src="./app/views/ProjectView.js"></script>
+
+    <script src="./app/app.js"></script>
 </body>
 </html>

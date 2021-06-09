@@ -1,8 +1,19 @@
 .project__social-icons {
-    display: none;
+    display: flex;
         align-items: center;
 
     color: var(--color-light);
+
+    height: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: transform .5s;
+}
+
+.project__info:hover > .project__social-icons {
+    height: initial;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .project__social-icon {

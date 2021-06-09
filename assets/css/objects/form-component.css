@@ -2,7 +2,9 @@
     background-color: var(--color-formComponent-normal);
     border: none;
     border-radius: .5rem;
+    box-sizing: border-box;
     color: var(--color-formComponent-font);
     font-size: var(--font-size-body);
     padding: .9rem 1rem;
+    width: 100%;
 }
