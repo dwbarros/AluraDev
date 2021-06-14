@@ -3,12 +3,11 @@ let ConnectionFactory = (function tmp() {
     const dbName = 'aluradev'
     const version = 1
     const stores = ['projects']
-
     let connection = null
-
     let close = null
 
     return class ConnectionFactory {
+        
         constructor() {
             throw new Error('ConnectionFactory é uma classe estática. Não é possível instanciá-la')
         }
@@ -44,7 +43,6 @@ let ConnectionFactory = (function tmp() {
         }
 
         static _createStores(connection) {
-
             stores.forEach(store => {
                 
                 if (connection.objectStoreNames.contains(store))

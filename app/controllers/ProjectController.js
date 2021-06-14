@@ -1,7 +1,6 @@
 class ProjectController {
 
     constructor() {
-
         const $ = document.querySelector.bind(document)
 
         this._inputName = $('.custom__project__name')
@@ -12,15 +11,41 @@ class ProjectController {
         
         this._projectList = new ProjectList()
         this._projectView = new ProjectView('.project__cards')
-        this._projectView.upDate(this._projectList)
+
+        ConnectionFactory
+            .getConnection()
+            .then(connection => {
+                new ProjectDao(connection)
+                    .listAllProjects()
+                    .then(projects => {
+                        projects.forEach(project => {
+                            this._projectList.add(project)
+                            this._projectView.update(this._projectList)
+                        });
+                    })
+            })
     }
     
 
     createProject(event) {
-        event.preventDefault()
-        this._projectList.add(this._newProject())
-        this._clearForm()
-        this._projectView.upDate(this._projectList)
+
+        // event.preventDefault()
+        
+        ConnectionFactory
+            .getConnection()
+            .then(connection => {
+
+                let project = this._newProject()
+
+                new ProjectDao(connection)
+                    .addProject(project)
+                    .then(() => {
+                        this._projectList.add(project)
+                        this._clearForm()
+                        this._projectView.update(this._projectList)
+                    })
+            })
+            .catch(erro => alert('Erro: ' + erro))
     }
 
     _newProject() {

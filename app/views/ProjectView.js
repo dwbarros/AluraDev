@@ -4,7 +4,7 @@ class ProjectView {
         this._element = document.querySelector(element)
     }
 
-    upDate(model) {
+    update(model) {
         this._element.innerHTML = this.template(model)
     }
 
@@ -13,7 +13,7 @@ class ProjectView {
             ${model.toArray().map(project => 
                 `
                 <li class="project__card">
-                    <div class="project__editor editor__container">
+                    <div class="project__editor editor__container" style="background-color:${project.color}">
                         <div class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
 

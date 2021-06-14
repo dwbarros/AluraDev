@@ -1,4 +1,5 @@
 class Project {
+    
     constructor(name, description, lp, color, code) {
         this._name = name
         this._description = description
