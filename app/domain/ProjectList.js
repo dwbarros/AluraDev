@@ -1,4 +1,4 @@
-class ProjectList {
+export class ProjectList {
 
     constructor() {
         this._projects = []

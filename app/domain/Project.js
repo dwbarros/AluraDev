@@ -1,4 +1,4 @@
-class Project {
+export class Project {
     
     constructor(name, description, lp, color, code) {
         this._name = name

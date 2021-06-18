@@ -1,36 +1,23 @@
-class ProjectController {
+import { Project } from '../domain/Project.js'
+import { ProjectDao } from '../dao/ProjectDao.js'
+import { ConnectionFactory } from '../services/ConnectionFactory.js'
+
+
+export class ProjectController {
 
     constructor() {
-        const $ = document.querySelector.bind(document)
 
+        const $ = document.querySelector.bind(document)
+        
         this._inputName = $('.custom__project__name')
         this._inputDescription = $('.custom__project__description')
         this._inputLP = $('.custom__config__lp')
         this._inputColor = $('.custom__config__color')
         this._inputCode = $('.editor__code')
-        
-        this._projectList = new ProjectList()
-        this._projectView = new ProjectView('.project__cards')
-
-        ConnectionFactory
-            .getConnection()
-            .then(connection => {
-                new ProjectDao(connection)
-                    .listAllProjects()
-                    .then(projects => {
-                        projects.forEach(project => {
-                            this._projectList.add(project)
-                            this._projectView.update(this._projectList)
-                        });
-                    })
-            })
     }
-    
 
-    createProject(event) {
+    createProject() {
 
-        // event.preventDefault()
-        
         ConnectionFactory
             .getConnection()
             .then(connection => {
@@ -40,12 +27,13 @@ class ProjectController {
                 new ProjectDao(connection)
                     .addProject(project)
                     .then(() => {
-                        this._projectList.add(project)
                         this._clearForm()
-                        this._projectView.update(this._projectList)
                     })
             })
-            .catch(erro => alert('Erro: ' + erro))
+            .catch(erro => { 
+                alert('Erro ao criar projeto')
+                console.log('Erro ao criar projeto: ' + erro)
+            })
     }
 
     _newProject() {

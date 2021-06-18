@@ -1,4 +1,7 @@
-class ProjectDao {
+import { Project } from '../domain/Project.js'
+
+
+export class ProjectDao {
 
     constructor(connection) {
         this._connection = connection
@@ -59,6 +62,22 @@ class ProjectDao {
             cursor.onerror = e => {
                 console.log(e.target.error)
                 reject('Erro ao tentar listar os Projetos')
+            }
+        })
+    }
+
+    deleteAllProjects() {
+        return new Promise((resolve, reject) => {
+            let request = this._connection
+                .transaction([this._store], 'readwrite')
+                .objectStore(this._store)
+                .clear()
+            
+            request.onsuccess = e => resolve('Projetos removidos com sucesso')
+
+            request.onerror = e => {
+                console.log(e.target.error)
+                reject('Não foi possível remover os Projetos')
             }
         })
     }

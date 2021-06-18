@@ -3,10 +3,10 @@
         align-items: center;
 
     color: var(--color-light);
+    height: initial;
 
-    height: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
+    visibility: visible;
+    transform: translateY(0);
     transition: transform .5s;
 }
 
@@ -50,4 +50,12 @@
 
 .project__user img {
     width: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+    .project__social-icons {
+        height: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+     }
 }
