@@ -3,6 +3,7 @@ export class ProjectListView {
     constructor(element) {
         this._element = document.querySelector(element)
         this._likeIcon = null
+        this._codes = null
     }
 
     update(model) {
@@ -24,7 +25,7 @@ export class ProjectListView {
                             <div class="editor__ellipse3"></div>
                         </div>
 
-                        <code class="editor__code" contenteditable="true">${project.code}</code>
+                        <code class="editor__code hljs">${project.code}</code>
                     </div>
                     
                     <article class="project__info">
