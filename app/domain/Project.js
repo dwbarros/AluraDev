@@ -1,12 +1,17 @@
 export class Project {
     
-    constructor(name, description, lp, color, code) {
+    constructor(id, name, description, lp, color, code) {
+        this._id = id
         this._name = name
         this._description = description
         this._lp = lp
         this._color = color
         this._code = code
         Object.freeze(this)
+    }
+
+    get id() {
+        return this._id
     }
 
     get name() {
@@ -27,6 +32,10 @@ export class Project {
 
     get code() {
         return this._code
+    }
+
+    set id(id) {
+        this._id = id
     }
 
     set name(name) {

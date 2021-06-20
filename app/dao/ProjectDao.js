@@ -28,6 +28,26 @@ export class ProjectDao {
         })
     }
 
+    getProject(id) {
+        return new Promise((resolve, reject) => {
+
+            let request = this._connection
+                .transaction([this._store], 'readwrite')
+                .objectStore(this._store)
+                .get(id)
+
+                request.onsuccess = e => {
+
+                resolve(e.target.result)
+            }
+
+            request.onerror = e => {
+                console.log(e.target.error)
+                reject('Erro ao tentar gravar um Projeto')
+            }
+        })
+    }
+
     listAllProjects() {
 
         return new Promise((resolve, reject) => {
@@ -44,8 +64,9 @@ export class ProjectDao {
 
                 if(pointer) {
                     let data = pointer.value
-
+                    
                     projects.push(new Project(
+                        pointer.key,
                         data._name, 
                         data._description, 
                         data._lp, 

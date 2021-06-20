@@ -8,11 +8,11 @@ export class ProjectListController {
 
     constructor() {
         const $ = document.querySelector.bind(document)
-        
+
         this._projectList = new ProjectList()
         this._projectListView = new ProjectListView('.project__cards')
-
         this._init()
+
     }
 
     _init() {

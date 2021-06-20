@@ -9,6 +9,7 @@ export class ProjectController {
 
         const $ = document.querySelector.bind(document)
         
+        this._id = null
         this._inputName = $('.custom__project__name')
         this._inputDescription = $('.custom__project__description')
         this._inputLP = $('.custom__config__lp')
@@ -36,8 +37,28 @@ export class ProjectController {
             })
     }
 
+    updateProject(key) {
+        window.location = "./index.html"
+        this._id = key
+
+        ConnectionFactory
+            .getConnection()
+            .then(connection => {
+                new ProjectDao(connection)
+                    .getProject(key)
+                    .then(project => {
+                        console.log(project)
+                    })
+            })
+            .catch(err => {
+                alert('Erro ao tentar editar o Projeto')
+                console.log('Erro ao tentar editar o Projeto: ' + err)
+            })
+    }
+
     _newProject() {
         return new Project(
+            null,
             this._inputName.value, 
             this._inputDescription.value, 
             this._inputLP.value, 

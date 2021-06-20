@@ -1,21 +1,26 @@
+import { ProjectController } from "../controllers/ProjectController.js"
+
 export class ProjectListView {
 
     constructor(element) {
         this._element = document.querySelector(element)
         this._likeIcon = null
-        this._codes = null
+        this._editorCode = null
+        this._card = null
     }
 
     update(model) {
         this._element.innerHTML = this._template(model)
-        this._updateIconEvents()
+        this._highlightElements()
+        this._setLikeIconEvents()
+        this._setEvents()
     }
 
     _template(model) {
         return `
             ${model.toArray().map(project =>
             `
-                <li class="project__card">
+                <li class="project__card" data-key="${project.id}">
                     <div class="project__editor editor__container" style="background-color:${project.color}">
                         <div class="editor__ellipses">
                             <div class="editor__ellipse1"></div>
@@ -63,7 +68,15 @@ export class ProjectListView {
         `
     }
 
-    _updateIconEvents() {
+    _highlightElements() {
+        this._editorCode = document.querySelectorAll('.editor__code')
+        
+        this._editorCode.forEach((element) => {
+            hljs.highlightElement(element)
+        })
+    }
+
+    _setLikeIconEvents() {
 
         this._likeIcon = document.querySelectorAll('.like-icon')
 
@@ -90,4 +103,17 @@ export class ProjectListView {
             })
         })        
     }
+
+
+    _setEvents() {
+        this._card = document.querySelectorAll('.project__card')
+        
+        this._card.forEach((element) => {
+            element.addEventListener('click', () => {
+                const projectController = new ProjectController
+                projectController.updateProject(element.dataset.key)
+            })
+        })
+    }
+
 }

@@ -30,7 +30,6 @@ export class ConnectionFactory {
                         throw new Error('Não é possível fechar a conexão diretamente')
                     }
                 }
-
                 resolve(connection)
             }
 
